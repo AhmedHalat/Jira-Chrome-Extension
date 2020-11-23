@@ -1,0 +1,30 @@
+{
+  "name": "Jira Color",
+  "version": "1.1",
+  "description": "A browser action to add a new visual to Jira Cards",
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+      "default_title": "Jira Color",
+      "default_icon": "jira.png"
+  },
+  "commands":{
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+A",
+        "mac": "MacCmd+Shift+A"
+      }
+    }
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}
